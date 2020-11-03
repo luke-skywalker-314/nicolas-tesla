@@ -1,0 +1,18 @@
+//calculate π using tayler series or the relation of arctan(x)
+#include<stdio.h>
+int main()
+{
+    double pi=0.0f;
+    long n;
+    printf("Enter n:\n");
+    scanf("%d",&n);
+    for(int i=0,k;i<=n;i++){
+        k=2*i+1;
+        if(i%2==1){
+            k=-k;
+        }
+        pi=pi+1.0f/k;
+    }
+    printf("pi=%.30lf",4*pi);
+    return 0;
+}
